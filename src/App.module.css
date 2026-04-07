@@ -1,0 +1,56 @@
+.app {
+  min-height: 100dvh;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.main {
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(16px, 4vw, 24px);
+  color: #c62828;
+  text-align: center;
+}
+
+.retryButton {
+  margin-top: 12px;
+  padding: 10px 22px;
+  min-height: 44px;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: background-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.retryButton:hover {
+  background: #1e88e5;
+}
+
+.retryButton:focus {
+  outline: none;
+}
+
+.retryButton:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2196f3;
+}
+
+.sentinel {
+  height: 1px;
+}
+
+.loadingMore {
+  text-align: center;
+  padding: 16px 20px max(32px, env(safe-area-inset-bottom));
+  color: #757575;
+  font-size: clamp(13px, 3vw, 14px);
+}

@@ -1,0 +1,24 @@
+.grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(12px, 3vw, 24px);
+  padding-bottom: clamp(16px, 4vw, 32px);
+  column-width: clamp(140px, 22vw, 220px);
+  column-gap: clamp(10px, 2vw, 18px);
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: min(50vh, 480px);
+  padding: clamp(16px, 4vw, 32px);
+  text-align: center;
+}
+
+.emptyText {
+  font-size: clamp(16px, 4vw, 18px);
+  color: #757575;
+  line-height: 1.4;
+  max-width: 28ch;
+}

@@ -1,0 +1,93 @@
+.card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  break-inside: avoid;
+  margin-bottom: clamp(8px, 2vw, 14px);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.heartButton {
+  position: absolute;
+  right: clamp(8px, 2vw, 14px);
+  bottom: clamp(8px, 2vw, 14px);
+  left: auto;
+  background: rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.heartButton:focus {
+  outline: none;
+}
+
+.heartButton:focus-visible {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .heartButton:hover,
+  .heartButton.heartHovered {
+    background: rgba(0, 0, 0, 0.55);
+    transform: scale(1.08);
+  }
+}
+
+.heartButton.favorited {
+  background: rgba(255, 58, 26, 0.2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .heartButton.favorited:hover {
+    background: rgba(255, 58, 26, 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heartButton {
+    transition: none;
+  }
+
+  .heartButton:hover,
+  .heartButton.heartHovered {
+    transform: none;
+  }
+}
