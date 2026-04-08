@@ -23,7 +23,7 @@ npm run dev
 
 ## Деплой
 
-GitHub Actions собирает `dist` и публикует на GitHub Pages (ветка `main`). В репозитории: **Settings → Pages → Source: GitHub Actions**.
+GitHub Actions собирает `dist` и публикует на GitHub Pages. В репозитории обязательно: **Settings → Pages → Build and deployment → Source: GitHub Actions** (не «Deploy from a branch»). Иначе на сайт попадёт сырой `index.html` из репо с `/src/main.tsx` → белый экран.
 
 Для GitHub Pages в `vite.config.ts` при сборке задаётся `base: '/frontend-challenge/'` (имя репозитория). Если переименуешь репо — поменяй путь в конфиге.
 
