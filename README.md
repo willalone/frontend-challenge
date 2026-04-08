@@ -25,7 +25,7 @@ npm run dev
 
 GitHub Actions собирает `dist` и публикует на GitHub Pages (ветка `main`). В репозитории: **Settings → Pages → Source: GitHub Actions**.
 
-`vite.config.ts`: `base: './'` — чтобы статика открывалась по пути вида `username.github.io/frontend-challenge/`.
+Для GitHub Pages в `vite.config.ts` при сборке задаётся `base: '/frontend-challenge/'` (имя репозитория). Если переименуешь репо — поменяй путь в конфиге.
 
 ## Нюансы
 
